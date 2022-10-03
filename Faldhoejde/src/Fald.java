@@ -1,7 +1,8 @@
 import java.util.Scanner;
 
-public class Fald {
+public class Check {
     public static void main(String[] args) {
+        Scanner scanner1 = new Scanner(System.in);
         Double g, t, v, h;
         String quit;
         Boolean loop;
@@ -13,26 +14,20 @@ public class Fald {
         loop = true;
 
 
-
-        Scanner scanner1 = new Scanner(System.in);
-        Scanner scanner2 = new Scanner(System.in);
-
-        while (loop = true) {
-            System.out.print("Indtast højde i cm: ");
-            if (scanner1.hasNextDouble()) {
-                h = scanner1.nextDouble();
+        while (true) {
+            System.out.print("Angiv højde i cm: ");
+            try {
+                h = Double.parseDouble(scanner1.next());
                 t = Math.sqrt((2 * h) / (g));
                 v = g * t;
-                System.out.println("Faldtiden uden luftmodstand er: " + t + " Sekunder");
-                System.out.println("Sluthastighed uden luftmodstand: " + v + " m/s");
-
-                System.out.print("Vil du afslutte y/n: ");
-                quit = scanner2.nextLine();
-                if (quit.equals("y")) {
-                    break;
-                }
+                System.out.println("Faldtiden uden luftmodstand er: " + String.format("%.2f", t) + " Sekunder");
+                System.out.println("Sluthastighed uden luftmodstand: " + String.format("%.2f", v) + " m/s");
+                System.out.println();
             }
-            else { System.out.print("Invalid input!"); break;}
+            catch (NumberFormatException ignore)
+            {
+                System.out.println("Invalid input");
+            }
         }
     }
 }
