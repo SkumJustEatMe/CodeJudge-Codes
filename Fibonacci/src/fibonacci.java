@@ -1,22 +1,20 @@
 public class fibonacci {
     public static void main(String[] args) {
-        int input, f0, f1, f2, f3, f4, f5, f6;
-        double golden, resultat;
+        int input = 12;
+        double golden;
         golden = 1.618;
-        f0 = 0;
-        f1 = 1;
-        f2 = 1;
-        f3 = 2;
-        f4 = 3;
-        f5 = 5;
-        f6 = 8;
+        int count = 0;
 
-        double test1 = 2;
-        double test2 = 4;
+        int f1, f2, f3, f4;
 
-        input = 12;
-        resultat = Math.pow(test1, test2);
-        System.out.print(resultat);
+        int[] tal = {0,1,1,2,3,5,8};
+
+        for (int i = 0; i < input; i++){
+            int NytTal = tal[count];
+                    System.out.println(NytTal);
+            count++;
+        }
+
 
 
     }
