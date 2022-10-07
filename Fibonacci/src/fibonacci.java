@@ -5,14 +5,18 @@ public class fibonacci {
         golden = 1.618;
         int count = 0;
 
-        int f1, f2, f3, f4;
+        int f1, f2;
+        f1 = 0;
+        f2 = 1;
 
-        int[] tal = {0,1,1,2,3,5,8};
+        int[] tal = {0,1};
 
         for (int i = 0; i < input; i++){
-            int NytTal = tal[count];
-                    System.out.println(NytTal);
-            count++;
+            int NytTal = tal[f1]+tal[f2];
+            f1++;
+            f2++;
+            System.out.println(NytTal);
+
         }
 
 
