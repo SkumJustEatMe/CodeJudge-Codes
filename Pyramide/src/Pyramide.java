@@ -9,25 +9,25 @@ public class Pyramide {
         int rows = scanner1.nextInt();
 
         for (int i = 1; i<= rows; ++i){
-            System.out.println("\nPyramide " + i);
-            pyramide(z, k, rows);
+            System.out.println("\nPyramid " + i);
+            pyramide(z, k);
             ++z;
         }
 
         }
 
-        private static void pyramide(int z, int k, int rows){
+        private static void pyramide(int z, int k){
             for (int i = 1; i <= z; ++i, k = 0) {
-                punktummer(rows, i);
+                punktummer(i, z);
                 stjerner(k, i);
-                punktummer(rows, i);
+                punktummer(i, z);
 
                 System.out.println();
             }
         }
 
-        private static void punktummer(int rows, int i){
-            for (int space = 1; space <= rows - i; ++space) {
+        private static void punktummer(int i, int z){
+            for (int space = 1; space <= z - i; ++space) {
                 System.out.print(".");
             }
         }
