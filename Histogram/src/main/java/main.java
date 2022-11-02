@@ -2,11 +2,12 @@ import java.util.Scanner;
 
 public class main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String scanner1 = scanner.nextLine();
+        Scanner scanner1 = new Scanner(System.in);
+        String input = scanner1.nextLine();
 
         Histogram histogram = new Histogram();
-        System.out.print(histogram.convertStringToList(scanner1));
+        histogram.convertStringToList(input);
+        System.out.print(histogram.tabel());
 
     }
 }
