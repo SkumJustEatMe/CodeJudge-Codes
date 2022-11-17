@@ -3,18 +3,16 @@ import java.awt.*;
 
 public class GUI {
 
+    private int w = 1080;
+    private int h = 720;
     public GUI(){
         JFrame frame = new JFrame();
+        Drawing rectangel = new Drawing(w, h);
 
-
-        JPanel panel = new JPanel();
-        panel.setBorder(BorderFactory.createEmptyBorder(30,30,30,30));
-        panel.setLayout(new GridLayout(0, 1));
-
-        frame.add(panel, BorderLayout.CENTER);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(w,h);
         frame.setTitle("Test");
-        frame.pack();
+        frame.add(rectangel);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
 }
